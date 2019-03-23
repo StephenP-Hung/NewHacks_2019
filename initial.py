@@ -14,4 +14,4 @@ for i in niceyo:
 def my_parents(parents_names):
     print(parents_names + " don't love me")
     
-#my_parents("Yifei and his girl")
+my_parents("Michael Seica and his dad")
