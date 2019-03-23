@@ -2,7 +2,6 @@
 #name = "lessgo"
 #print("Ayo" + " " + name)
 
-
 niceyo = {"Hello":"dAdDEee",
          4:["Nice", "Job", 1, 2, 4, "No you"],
          "OOF": "GANG"}
