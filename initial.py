@@ -1,19 +1,17 @@
 #Hello this is our initial file in Python.
-name = "lessgo"
-print("Ayo" + " " + name)
+#name = "lessgo"
+#print("Ayo" + " " + name)
 
 
 niceyo = {"Hello":"dAdDEee",
          4:["Nice", "Job", 1, 2, 4, "No you"],
          "OOF": "GANG"}
-print(len(niceyo[4]))
+#print(len(niceyo[4]))
 
 for i in niceyo:
     print(niceyo[i])
-    if(niceyo[i] == "GANG"):
-        break
 
 def my_parents(parents_names):
     print(parents_names + " don't love me")
     
-my_parents("Yifei and his girl")
+#my_parents("Yifei and his girl")
