@@ -4,22 +4,13 @@ import logging as log
 import datetime as dt
 from time import sleep
 import email_send
+from scan import zoom
+from scan import zoom_on_press
+from scan import myrectangle
+from scan import current_rectangles
 
-
-class myrectangle:
-
-    def __init__(self, x, y, width, height):
-        self.x = x;
-        self.y = y;
-        self.height = height;
-        self.width = width;
-
-    def contains(self, x, y):
-        if x >= self.x and x <= self.x+ self.width and y >= self.y and y <= self.y+ self.height:
-            return True;
-
-        else:
-            return False;
+cv2.namedWindow('Video')
+cv2.setMouseCallback('Video', zoom_on_press)
 
 
 cascPath = "haarcascade_frontalface_default.xml"
@@ -29,7 +20,6 @@ log.basicConfig(filename='webcam.log',level=log.INFO)
 video_capture = cv2.VideoCapture(0)
 anterior = 0
 
-current_rectangles = [];
 email_sent = False
 
 while True:
