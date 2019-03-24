@@ -33,16 +33,15 @@ def zoom(centerX,centerY,flag):
       
 
       	#add + or - 5 % to zoom
+		if (flag):
+			scale += 5  # +5
 
-        if (flag): 
-        	scale += 5  # +5
+		if (not flag and scale == 15): 
+			scale = 10  # normal scale
 
-        if (not flag and scale == 15): 
-            scale = 10  # normal scale
-
-        if(not flag):
-            scale = 5 # -5
-            print('zoom done')
+		if(not flag):
+			scale = 5 # -5
+			print('zoom done')
 
 
 def zoom_on_press (event,x,y,flags,param):
@@ -79,6 +78,5 @@ def show_webcam():
 
 
 show_webcam()
-
 
 
