@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 """
 Training a Classifier
@@ -335,21 +334,3 @@ print(device)
 # .. _More tutorials: https://github.com/pytorch/tutorials
 # .. _Discuss PyTorch on the Forums: https://discuss.pytorch.org/
 # .. _Chat with other users on Slack: https://pytorch.slack.com/messages/beginner/
-
-=======
-import torch
-
-"""x = torch.ones(2, 2, requires_grad=True)
-print("x: ")
-print(x)
-print(x.grad)
-
-y = torch.randn(2,2, requires_grad=True)
-y.backward()
-print("y: ", y)
-print(y.grad)"""
-
-a = torch.DoubleTensor(4, 6)
-a = a.uniform_(0,1)
-print(a)
->>>>>>> fuckin around with torch
