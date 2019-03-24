@@ -57,7 +57,7 @@ Using ``torchvision``, it’s extremely easy to load CIFAR10.
 """
 import torch
 import torchvision
-import torchvisi3on.transforms as transforms
+import torchvision.transforms as transforms
 
 
 ########################################################################
