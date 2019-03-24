@@ -3,8 +3,9 @@ import sys
 import logging as log
 import datetime as dt
 from time import sleep
+import email_send
 
- 
+
 class myrectangle:
 
     def __init__(self, x, y, width, height):
@@ -29,6 +30,7 @@ video_capture = cv2.VideoCapture(0)
 anterior = 0
 
 current_rectangles = [];
+email_sent = False
 
 while True:
     if not video_capture.isOpened():
@@ -53,6 +55,11 @@ while True:
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         current_rectangles.append(myrectangle(x,y,w,h))
+
+    #sending email if face detected
+    if len(current_rectangles) != 0 and not email_sent:
+        email_send.send_email()
+        email_sent = True
 
     if anterior != len(faces):
         anterior = len(faces)
